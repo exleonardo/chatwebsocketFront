@@ -3,7 +3,7 @@ import './App.css';
 import {io} from "socket.io-client";
 
 const socket = io('wss://test-back-socket-six.vercel.app/',{transports:['websocket', 'polling'],
-rejectUnauthorized:false});
+rejectUnauthorized:false,withCredentials:true});
 function App() {
   const [messages , setMessages]=useState<Array<any>>([])
   const [message,setMessage]= useState('')
