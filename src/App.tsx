@@ -2,7 +2,7 @@ import React , {useEffect , useState} from 'react';
 import './App.css';
 import {io} from "socket.io-client";
 
-const socket = io('wss://test-back-socket-six.vercel.app');
+const socket = io('wss://test-back-socket-six.vercel.app/');
 function App() {
   const [messages , setMessages]=useState<Array<any>>([])
   const [message,setMessage]= useState('')
